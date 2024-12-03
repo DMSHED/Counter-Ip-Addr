@@ -18,7 +18,7 @@ public class CreateFileWithIpAddr {
     public static void main(String[] args) {
         Path path = Path.of ("resources", "testFile.txt");
         long begin = System.nanoTime();
-        String str = prepareDataWithThreadPool(10_000_000);
+        String str = prepareDataWithThreadPool(10);
         writeIpAddrToFile(path, str);
         long time = System.nanoTime() - begin;
         System.out.printf("Took %.3f seconds to write", time/ 1e9);
